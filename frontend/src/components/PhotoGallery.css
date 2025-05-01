@@ -1,0 +1,200 @@
+.polaroid-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* ✅ Center polaroids vertically within rows */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  
+  /* Common polaroid structure */
+  .polaroid {
+    background: white;
+    padding: 10px 10px 15px 10px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: auto;
+    height: auto; /* ✅ Let height adjust naturally */
+  }
+  
+  /* Specific sizes */
+  .horizontal-polaroid {
+    width: 320px;
+  }
+  
+  .vertical-polaroid {
+    width: 220px;
+  }
+  
+  .polaroid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  /* Caption */
+  .caption {
+    margin-top: 8px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: bold;
+  }
+  
+  /* Small tweak for horizontal captions */
+  .horizontal-polaroid .caption {
+    margin-top: 6px; /* ✅ Less gap below image */
+  }
+  
+  /* Hover zoom effect */
+  .polaroid:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal.open {
+    display: flex;
+  }
+  
+  .modal img {
+    max-width: 90%;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+/* Mobile Swiper Wrapper */
+.mobile-swiper-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Mobile polaroid */
+  .mobile-polaroid {
+    background: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  
+  .mobile-polaroid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  .mobile-vertical-image {
+    height: 320px;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  /* Navigation Arrows */
+  .mobile-arrows {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .custom-nav {
+    color: #1e3a8a;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Shrink Swiper default big arrows */
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+    color: #1e3a8a;
+    transform: scale(0.7);
+  }
+  
+  /* Remove weird background on arrows */
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 24px;
+  }
+  
+  /* --- Adjust navigation buttons --- */
+.custom-swiper .swiper-button-prev,
+.custom-swiper .swiper-button-next {
+  color: #1e3a8a; /* Deep blue */
+  transform: translateY(-50%) translateX(-19px); /* Move arrows horizontally */
+  top: 50%;
+}
+
+/* Move the next button outward to the right */
+.custom-swiper .swiper-button-next {
+  transform: translateY(-50%) translateX(18px);
+}
+
+/* Make the arrow icons a little smaller */
+.custom-swiper .swiper-button-prev::after,
+.custom-swiper .swiper-button-next::after {
+  font-size: 20px;
+}
+
+  
+  /* --- Responsive Adjustments --- */
+  @media (max-width: 1024px) {
+    .polaroid-gallery {
+      max-width: 700px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .polaroid-gallery {
+      max-width: 90%;
+      padding: 10px;
+      gap: 15px;
+    }
+  }
+  
