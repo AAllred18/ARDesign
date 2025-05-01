@@ -64,7 +64,7 @@ const Home: React.FC = () => {
               margin: "0 auto"
             }}
           >
-            <div className="w-full max-w-[90vw] md:max-w-[600px] mx-auto">
+            <div className="w-full max-w-[90vw] md:max-w-[600px] mx-auto fade-in-up">
               <svg
                 viewBox="0 -30 1100 200"
                 preserveAspectRatio="xMidYMid meet"
@@ -100,11 +100,13 @@ const Home: React.FC = () => {
               </svg>
             </div>
 
-            <div className="w-full max-w-[90vw] md:max-w-[700px] mt-4 mx-auto">
+            <div className="w-full max-w-[90vw] md:max-w-[700px] mt-4 mx-auto  fade-in-up"
+              style={{ animationDelay: "0.8s" }}>
               <svg
                 viewBox="0 25 1000 80"
                 preserveAspectRatio="xMidYMid meet"
                 className="w-full h-auto svg-subtitle-wrapper"
+                
               >
                 <text
                   x="50%"
