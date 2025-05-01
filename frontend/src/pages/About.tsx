@@ -8,6 +8,17 @@ const About: React.FC = () => {
             <div>
                 {/* Welcome Section */}
                 <div className="welcome-body">
+                    {/* Promo Section */}
+                    <div className="about-promo" style={{
+                    backgroundColor: '#f0f8ff',
+                    textAlign: 'center',
+                    padding: '30px 16px',
+                    fontSize: '2rem',
+                    fontWeight: 'bold',
+                    color: '#1e3a8a'
+                    }}>
+                    About Me
+                    </div>
                 {/* Welcome Text */}
                 <div className="text-box">
                     <h2>Welcome!</h2>

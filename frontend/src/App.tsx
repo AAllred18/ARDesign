@@ -1,6 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop';
+
+import 'swiper/swiper-bundle.css';
+
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';

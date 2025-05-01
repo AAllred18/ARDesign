@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import './PhotoGallery.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
 import { Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
+
 
 interface GalleryImage {
   src: string;
@@ -71,22 +71,21 @@ const PhotoGallery: React.FC = () => {
         </div>
       )}
 
-      {/* Mobile Swiper Carousel */}
       {isMobile && (
         <div className="mobile-swiper-wrapper" style={{ maxWidth: '480px', margin: '0 auto', paddingBottom: '30px' }}>
           <Swiper
             modules={[Navigation]}
-            navigation
+            navigation  // ✅ This enables default arrow generation
             autoHeight={true}
             slidesPerView={1}
             spaceBetween={20}
             centeredSlides={true}
-            style={{ width: '100%'}}
-            className="custom-swiper" 
+            style={{ width: '100%' }}
+            className="custom-swiper"
           >
             {images.map((img, index) => (
               <SwiperSlide key={index}>
-                <div className="mobile-polaroid" onClick={() => openModal(img.src)}>
+                <div className="mobile-polaroid">
                   <img
                     src={img.src}
                     alt={img.caption}
@@ -109,6 +108,8 @@ const PhotoGallery: React.FC = () => {
           </Swiper>
         </div>
       )}
+
+
 
       {/* Modal View */}
       {modalOpen && (

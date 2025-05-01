@@ -8,10 +8,13 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
-      <div style={{ paddingTop: '50px' }}>
-        {children}
+      <div className="flex flex-col min-h-screen" style={{ paddingTop: '50px' }}>
+        <main className="flex-grow">
+          {children}
+          <Footer /> {/* Add this here */}
+        </main>
       </div>
-      <Footer /> {/* Add this here */}
+      
     </>
     
     

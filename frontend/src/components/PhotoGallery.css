@@ -167,13 +167,13 @@
 .custom-swiper .swiper-button-prev,
 .custom-swiper .swiper-button-next {
   color: #1e3a8a; /* Deep blue */
-  transform: translateY(-50%) translateX(-19px); /* Move arrows horizontally */
+  transform: translateY(-50%) translateX(0px); /* Move arrows horizontally */
   top: 50%;
 }
 
 /* Move the next button outward to the right */
 .custom-swiper .swiper-button-next {
-  transform: translateY(-50%) translateX(18px);
+  transform: translateY(-50%) translateX(0px);
 }
 
 /* Make the arrow icons a little smaller */
