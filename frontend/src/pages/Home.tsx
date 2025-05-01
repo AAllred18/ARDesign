@@ -140,16 +140,21 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <br />
+        <br />< br/>
         
         <h1 className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-4">
           At A&R Design, creativity meets simplicity.
         </h1>
+
+        <br />< br/>
+
         <p className="text-center text-lg text-gray-700 max-w-3xl mx-auto px-4 leading-relaxed">
           I'm Andrew Allred — a developer passionate about crafting clean, user-focused websites and thoughtful digital experiences. Whether you're here to browse my work, learn about my journey, or start a conversation, I'm glad you're here.
           <br /><br />
           Take a look around, and feel free to reach out if something resonates. I’m always excited by new challenges, meaningful projects, and opportunities to make a difference through design.
         </p>
+
+        <br />< br/>
 
         {/* Cards to link each section */}
         <div className="flex flex-wrap justify-center px-6 py-10">
@@ -163,6 +168,8 @@ const Home: React.FC = () => {
             />
           ))}
         </div>
+
+        <br />< br/>
 
       </div>
     </Layout>

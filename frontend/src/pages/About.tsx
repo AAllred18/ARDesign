@@ -9,7 +9,7 @@ const About: React.FC = () => {
                 {/* Welcome Section */}
                 <div className="welcome-body">
                     {/* Promo Section */}
-                    <div className="about-promo" style={{
+                    <div style={{
                     backgroundColor: '#f0f8ff',
                     textAlign: 'center',
                     padding: '30px 16px',
@@ -21,26 +21,30 @@ const About: React.FC = () => {
                     </div>
                 {/* Welcome Text */}
                 <div className="text-box">
-                    <h2>Welcome!</h2>
+                    <br></br>
                     <p>
                     Hi there! I'm <strong>Andrew Allred</strong>, and I grew up in the beautiful town of <strong>Kealakekua</strong> on the island of <strong>Hawaii</strong>. 
                     I’m married to my wonderful wife, <strong>Reagan</strong>. 
                     My deep love for technology from a young age led me to pursue <strong>Information Systems</strong> at <strong>BYU Provo</strong>. 
                     Through my program, I’ve had the opportunity to expand and refine my skills in various ways.
                     </p>
+                    <br></br>
                     <p>
                     Feel free to explore my website to learn more about my professional background and projects. 
                     If you’d like to connect or have any questions, don’t hesitate to reach out!
                     </p>
+                    <br></br>
                 </div>
                 </div>
                 {/* Photo Gallery */}
                 <PhotoGallery /> 
                 <div className="text-box">
+                    <br></br>
                     <p>
                     Feel free to explore my website to learn more about my professional background and projects. 
                     If you’d like to connect or have any questions, don’t hesitate to reach out!
                     </p>
+                    <br></br>
                 </div>
             </div>
 
