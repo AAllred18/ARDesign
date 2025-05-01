@@ -12,12 +12,12 @@ interface GalleryImage {
 }
 
 const images: GalleryImage[] = [
-  { src: '../src/assets/Proposal.jpg', caption: 'The Day I proposed to Reagan\n12/1/2023', orientation: 'horizontal' },
-  { src: '../src/assets/About.jpg', caption: 'Exploring Keauhou Bay\n5/7/2023', orientation: 'vertical' },
-  { src: '../src/assets/FamilyChristmas.jpg', caption: 'Family Christmas in Idaho\n12/23/2023', orientation: 'horizontal' },
-  { src: '../src/assets/BYUFootballGame.jpg', caption: 'BYU Football Game\n9/2/2023', orientation: 'vertical' },
+  { src: '../src/assets/Proposal.jpg', caption: 'The Day I proposed to Reagan', orientation: 'horizontal' },
+  { src: '../src/assets/Hawaii.jpg', caption: 'Exploring Keauhou Bay', orientation: 'vertical' },
+  { src: '../src/assets/FamilyChristmas.jpg', caption: 'Family Christmas in Idaho', orientation: 'horizontal' },
+  { src: '../src/assets/BYUFootballGame.jpg', caption: 'BYU Football Game', orientation: 'vertical' },
   { src: '../src/assets/Proposal.jpg', caption: 'Photo 3,1', orientation: 'horizontal' },
-  { src: '../src/assets/WeddingDay.jpg', caption: 'Wedding Day\n6/15/2024', orientation: 'vertical' },
+  { src: '../src/assets/WeddingDay.jpg', caption: 'Wedding Day', orientation: 'vertical' },
 ];
 
 const PhotoGallery: React.FC = () => {

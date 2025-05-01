@@ -11,7 +11,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <div className="flex flex-col min-h-screen" style={{ paddingTop: '50px' }}>
         <main className="flex-grow">
           {children}
-          <Footer /> {/* Add this here */}
+          <Footer /> 
         </main>
       </div>
       

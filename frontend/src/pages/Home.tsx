@@ -3,7 +3,7 @@ import FlipCard from '../components/FlipCard';
 import '../index.css'
 import '../pages/Home.css'
 
-import AboutImage from '../assets/About.jpg';
+import AboutImage from '../assets/About.png';
 import ResumeImage from '/src/assets/Resume.png';
 import ContactImage from '../assets/Contact.png';
 import PortfolioImage from '/src/assets/Portfolio.png';
@@ -31,8 +31,9 @@ const Home: React.FC = () => {
         <div
           style={{
             position: "relative",
-            width: "100%",
+            width: "95%",
             height: "auto",
+            margin: "0 auto"
           }}
         >
           <div className="image-container">
@@ -49,7 +50,7 @@ const Home: React.FC = () => {
               position: "absolute",
               top: 0,
               left: 0,
-              width: "100%",
+              width: "95%",
               height: "100%",
               zIndex: 2,
               display: "flex",
@@ -58,17 +59,18 @@ const Home: React.FC = () => {
               alignItems: "center",
               padding: "20px",
               textAlign: "center",
+              margin: "0 auto"
             }}
           >
             <div className="w-full max-w-[90vw] md:max-w-[600px] mx-auto">
               <svg
-                viewBox="0 0 1000 110"
+                viewBox="0 -30 1100 200"
                 preserveAspectRatio="xMidYMid meet"
-                className="w-full h-auto"
+                className="w-full h-auto svg-welcome-wrapper"
               >
                 <text
                   x="50%"
-                  y="100"
+                  y="160"
                   fontSize="90"
                   fontWeight="bold"
                   fill="white"
@@ -77,17 +79,19 @@ const Home: React.FC = () => {
                   strokeLinejoin="round"
                   fontFamily="inherit"
                   textAnchor="middle"
+                  className="svg-welcome"
                 >
                   Welcome
                 </text>
                 <text
                   x="50%"
-                  y="100"
+                  y="160"
                   fontSize="90"
                   fontWeight="bold"
                   fill="white"
                   fontFamily="inherit"
                   textAnchor="middle"
+                  className="svg-welcome"
                 >
                   Welcome
                 </text>
@@ -96,32 +100,34 @@ const Home: React.FC = () => {
 
             <div className="w-full max-w-[90vw] md:max-w-[700px] mt-4 mx-auto">
               <svg
-                viewBox="0 30 1000 100"
+                viewBox="0 20 1000 80"
                 preserveAspectRatio="xMidYMid meet"
-                className="w-full h-auto"
+                className="w-full h-auto svg-subtitle-wrapper"
               >
                 <text
                   x="50%"
                   y="60"
-                  fontSize="30"
+                  fontSize="35"
                   fontWeight="bold"
                   fill="white"
                   stroke="#4682B4"
-                  strokeWidth="1.5"
+                  strokeWidth="1.75"
                   strokeLinejoin="round"
                   fontFamily="inherit"
                   textAnchor="middle"
+                  className="svg-subtitle"
                 >
                   Let’s create something impactful
                 </text>
                 <text
                   x="50%"
                   y="60"
-                  fontSize="30"
+                  fontSize="35"
                   fontWeight="bold"
                   fill="white"
                   fontFamily="inherit"
                   textAnchor="middle"
+                  className="svg-subtitle"
                 >
                   Let’s create something impactful
                 </text>
