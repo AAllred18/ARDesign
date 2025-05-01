@@ -38,7 +38,7 @@ const Home: React.FC = () => {
         >
           <div className="image-container">
             <img
-              src="/src/assets/ReaganandAndrew.jpg"
+              src="../assets/ReaganandAndrew.jpg"
               alt="Andrew and Reagan"
               className="responsive-hero-image"
             />
@@ -70,7 +70,7 @@ const Home: React.FC = () => {
               >
                 <text
                   x="50%"
-                  y="160"
+                  y="120"
                   fontSize="90"
                   fontWeight="bold"
                   fill="white"
@@ -85,7 +85,7 @@ const Home: React.FC = () => {
                 </text>
                 <text
                   x="50%"
-                  y="160"
+                  y="120"
                   fontSize="90"
                   fontWeight="bold"
                   fill="white"
@@ -100,7 +100,7 @@ const Home: React.FC = () => {
 
             <div className="w-full max-w-[90vw] md:max-w-[700px] mt-4 mx-auto">
               <svg
-                viewBox="0 20 1000 80"
+                viewBox="0 25 1000 80"
                 preserveAspectRatio="xMidYMid meet"
                 className="w-full h-auto svg-subtitle-wrapper"
               >

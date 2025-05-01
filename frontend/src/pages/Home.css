@@ -27,15 +27,16 @@
     /* Zoomed-in vertical mobile style */
 @media (max-width: 600px) {
     .image-container {
-        height: 650px;
+        height: 88vh; /* fill entire screen height */
         margin-left: auto;
         margin-right: auto;
+        overflow: hidden;
     }
 
     .responsive-hero-image {
         object-fit: cover;
         object-position: center top;
-        object-position: 30% top; 
+        object-position: 35% top; 
     }
     .svg-welcome {
         font-size: 200px; /* larger for mobile */
