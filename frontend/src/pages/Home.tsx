@@ -9,6 +9,7 @@ import AboutImage from '../assets/About.png';
 import ResumeImage from '/src/assets/Resume.png';
 import ContactImage from '../assets/Contact.png';
 import PortfolioImage from '/src/assets/Portfolio.png';
+import { useEffect, useState } from "react";
 
 const imageMap: Record<string, string> = {
   "About Me": AboutImage,
@@ -24,7 +25,17 @@ const sections = [
   { title: 'Contact', path: '/contact', description: 'Let’s get in touch!' }
 ];
 
+
+
 const Home: React.FC = () => {
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 600);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <Layout>
@@ -66,13 +77,13 @@ const Home: React.FC = () => {
           >
             <div className="w-full max-w-[90vw] md:max-w-[600px] mx-auto fade-in-up">
               <svg
-                viewBox="0 -30 1100 200"
+                viewBox="0 -55 1100 260"
                 preserveAspectRatio="xMidYMid meet"
                 className="w-full h-auto svg-welcome-wrapper"
               >
                 <text
                   x="50%"
-                  y="120"
+                  y="200"
                   fontSize="90"
                   fontWeight="bold"
                   fill="white"
@@ -87,7 +98,7 @@ const Home: React.FC = () => {
                 </text>
                 <text
                   x="50%"
-                  y="120"
+                  y="200"
                   fontSize="90"
                   fontWeight="bold"
                   fill="white"
@@ -100,17 +111,17 @@ const Home: React.FC = () => {
               </svg>
             </div>
 
-            <div className="w-full max-w-[90vw] md:max-w-[700px] mt-4 mx-auto  fade-in-up"
-              style={{ animationDelay: "0.8s" }}>
+            {/* <div className="w-full max-w-[90vw] md:max-w-[700px] mt-4 mx-auto  fade-in-up"
+              style={{ animationDelay: "1.0s" }}>
               <svg
-                viewBox="0 25 1000 80"
+                viewBox="0 -60 1000 250"
                 preserveAspectRatio="xMidYMid meet"
                 className="w-full h-auto svg-subtitle-wrapper"
-                
               >
+
                 <text
                   x="50%"
-                  y="60"
+                  y={isMobile ? 20 : 0}
                   fontSize="35"
                   fontWeight="bold"
                   fill="white"
@@ -121,11 +132,11 @@ const Home: React.FC = () => {
                   textAnchor="middle"
                   className="svg-subtitle"
                 >
-                  Let’s create something impactful
+                  Build with Purpose
                 </text>
                 <text
                   x="50%"
-                  y="60"
+                  y={isMobile ? 20 : 0}
                   fontSize="35"
                   fontWeight="bold"
                   fill="white"
@@ -133,10 +144,179 @@ const Home: React.FC = () => {
                   textAnchor="middle"
                   className="svg-subtitle"
                 >
-                  Let’s create something impactful
+                  Build with Purpose
+                </text>
+
+                <br></br>
+
+                <text
+                  x="50%"
+                  y={isMobile ? 90 : 35}
+                  fontSize="35"
+                  fontWeight="bold"
+                  fill="white"
+                  stroke="#4682B4"
+                  strokeWidth="1.75"
+                  strokeLinejoin="round"
+                  fontFamily="inherit"
+                  textAnchor="middle"
+                  className="svg-subtitle"
+                >
+                  Design with Intention
+                </text>
+                <text
+                  x="50%"
+                  y={isMobile ? 90 : 35}
+                  fontSize="35"
+                  fontWeight="bold"
+                  fill="white"
+                  fontFamily="inherit"
+                  textAnchor="middle"
+                  className="svg-subtitle"
+                >
+                  Design with Intention
+                </text>
+
+                <br></br>
+
+                <text
+                  x="50%"
+                  y={isMobile ? 170 : 70}
+                  fontSize="35"
+                  fontWeight="bold"
+                  fill="white"
+                  stroke="#4682B4"
+                  strokeWidth="1.75"
+                  strokeLinejoin="round"
+                  fontFamily="inherit"
+                  textAnchor="middle"
+                  className="svg-subtitle"
+                >
+                  Create with Meaning
+                </text>
+                <text
+                  x="50%"
+                  y={isMobile ? 170 : 70}
+                  fontSize="35"
+                  fontWeight="bold"
+                  fill="white"
+                  fontFamily="inherit"
+                  textAnchor="middle"
+                  className="svg-subtitle"
+                >
+                  Create with Meaning
+                </text>
+
+              </svg>
+            </div> */}
+
+            <div
+              className="w-full max-w-[90vw] md:max-w-[700px] mt-4 mx-auto fade-in-up"
+              style={{ animationDelay: "1s", animationFillMode: "forwards" }}
+            >
+              <svg viewBox="0 -60 1000 80" preserveAspectRatio="xMidYMid meet" className="w-full h-auto">
+              <text
+                  x="50%"
+                  y={isMobile ? 10 : 10}
+                  fontSize="35"
+                  fontWeight="bold"
+                  fill="white"
+                  stroke="#4682B4"
+                  strokeWidth="1.75"
+                  strokeLinejoin="round"
+                  fontFamily="inherit"
+                  textAnchor="middle"
+                  className="svg-subtitle"
+                >
+                  Build with Purpose
+                </text>
+                <text
+                  x="50%"
+                  y={isMobile ? 10 : 10}
+                  fontSize="35"
+                  fontWeight="bold"
+                  fill="white"
+                  fontFamily="inherit"
+                  textAnchor="middle"
+                  className="svg-subtitle"
+                >
+                  Build with Purpose
                 </text>
               </svg>
             </div>
+
+            {/* Line 2 */}
+            <div
+              className="w-full max-w-[90vw] md:max-w-[700px] mt-4 mx-auto fade-in-up"
+              style={{ animationDelay: "1.5s", animationFillMode: "forwards" }}
+            >
+              <svg viewBox="0 15 1000 80" preserveAspectRatio="xMidYMid meet" className="w-full h-auto">
+              <text
+                  x="50%"
+                  y={isMobile ? 80 : 60}
+                  fontSize="35"
+                  fontWeight="bold"
+                  fill="white"
+                  stroke="#4682B4"
+                  strokeWidth="1.75"
+                  strokeLinejoin="round"
+                  fontFamily="inherit"
+                  textAnchor="middle"
+                  className="svg-subtitle"
+                >
+                  Design with Intention
+                </text>
+                <text
+                  x="50%"
+                  y={isMobile ? 80 : 60}
+                  fontSize="35"
+                  fontWeight="bold"
+                  fill="white"
+                  fontFamily="inherit"
+                  textAnchor="middle"
+                  className="svg-subtitle"
+                >
+                  Design with Intention
+                </text>
+              </svg>
+            </div>
+
+            {/* Line 3 */}
+            <div
+              className="w-full max-w-[90vw] md:max-w-[700px] mt-4 mx-auto fade-in-up"
+              style={{ animationDelay: "2s", animationFillMode: "forwards" }}
+            >
+              <svg viewBox="0 0 1000 80" preserveAspectRatio="xMidYMid meet" className="w-full h-auto">
+              <text
+                  x="50%"
+                  y={isMobile ? 60 : 25}
+                  fontSize="35"
+                  fontWeight="bold"
+                  fill="white"
+                  stroke="#4682B4"
+                  strokeWidth="1.75"
+                  strokeLinejoin="round"
+                  fontFamily="inherit"
+                  textAnchor="middle"
+                  className="svg-subtitle"
+                >
+                  Create with Meaning
+                </text>
+                <text
+                  x="50%"
+                  y={isMobile ? 60 : 25}
+                  fontSize="35"
+                  fontWeight="bold"
+                  fill="white"
+                  fontFamily="inherit"
+                  textAnchor="middle"
+                  className="svg-subtitle"
+                >
+                  Create with Meaning
+                </text>
+              </svg>
+            </div>
+
           </div>
         </div>
 
