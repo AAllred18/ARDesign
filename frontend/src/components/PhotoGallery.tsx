@@ -77,7 +77,7 @@ const PhotoGallery: React.FC = () => {
       )}
 
       {isMobile && (
-        <div className="mobile-swiper-wrapper" style={{ maxWidth: '480px', margin: '0 auto', paddingBottom: '30px' }}>
+        <div className="mobile-swiper-wrapper" style={{ maxWidth: '600px', margin: '0 auto', paddingBottom: '30px' }}>
           <Swiper
             modules={[Navigation]}
             navigation  // ✅ This enables default arrow generation

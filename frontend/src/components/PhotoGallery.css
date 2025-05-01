@@ -167,19 +167,19 @@
 .custom-swiper .swiper-button-prev,
 .custom-swiper .swiper-button-next {
   color: #1e3a8a; /* Deep blue */
-  transform: translateY(-50%) translateX(0px); /* Move arrows horizontally */
+  transform: translateY(-50%) translateX(-21px); /* Move arrows horizontally */
   top: 50%;
 }
 
 /* Move the next button outward to the right */
 .custom-swiper .swiper-button-next {
-  transform: translateY(-50%) translateX(0px);
+  transform: translateY(-50%) translateX(21px);
 }
 
 /* Make the arrow icons a little smaller */
 .custom-swiper .swiper-button-prev::after,
 .custom-swiper .swiper-button-next::after {
-  font-size: 20px;
+  font-size: 15px;
 }
 
   
@@ -192,8 +192,8 @@
   
   @media (max-width: 600px) {
     .polaroid-gallery {
-      max-width: 90%;
-      padding: 10px;
+      max-width: 95%;
+      padding: 20px;
       gap: 15px;
     }
   }
