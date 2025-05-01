@@ -3,6 +3,8 @@ import FlipCard from '../components/FlipCard';
 import '../index.css'
 import '../pages/Home.css'
 
+import HomeImage from '../assets/ReaganandAndrew.jpg'
+
 import AboutImage from '../assets/About.png';
 import ResumeImage from '/src/assets/Resume.png';
 import ContactImage from '../assets/Contact.png';
@@ -38,7 +40,7 @@ const Home: React.FC = () => {
         >
           <div className="image-container">
             <img
-              src="../assets/ReaganandAndrew.jpg"
+              src={HomeImage}
               alt="Andrew and Reagan"
               className="responsive-hero-image"
             />
