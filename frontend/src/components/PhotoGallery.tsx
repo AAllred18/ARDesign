@@ -4,6 +4,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { Navigation } from 'swiper/modules';
 
+import ProposalImage from '../assets/Proposal.jpg';
+import HawaiiImage from '../assets/Hawaii.jpg';
+import FamilyChristmasImage from '../assets/FamilyChristmas.jpg';
+import BYUFootballImage from '../assets/BYUFootballGame.jpg';
+import WeddingImage from '../assets/WeddingDay.jpg';
 
 interface GalleryImage {
   src: string;
@@ -12,12 +17,12 @@ interface GalleryImage {
 }
 
 const images: GalleryImage[] = [
-  { src: '../src/assets/Proposal.jpg', caption: 'The Day I proposed to Reagan', orientation: 'horizontal' },
-  { src: '../src/assets/Hawaii.jpg', caption: 'Exploring Keauhou Bay', orientation: 'vertical' },
-  { src: '../src/assets/FamilyChristmas.jpg', caption: 'Family Christmas in Idaho', orientation: 'horizontal' },
-  { src: '../src/assets/BYUFootballGame.jpg', caption: 'BYU Football Game', orientation: 'vertical' },
-  { src: '../src/assets/Proposal.jpg', caption: 'Photo 3,1', orientation: 'horizontal' },
-  { src: '../src/assets/WeddingDay.jpg', caption: 'Wedding Day', orientation: 'vertical' },
+  { src: ProposalImage, caption: 'The Day I proposed to Reagan', orientation: 'horizontal' },
+  { src: HawaiiImage, caption: 'Exploring Keauhou Bay', orientation: 'vertical' },
+  { src: FamilyChristmasImage, caption: 'Family Christmas in Idaho', orientation: 'horizontal' },
+  { src: BYUFootballImage, caption: 'BYU Football Game', orientation: 'vertical' },
+  { src: ProposalImage, caption: 'Photo 3.1', orientation: 'horizontal' }, // reuse works fine
+  { src: WeddingImage, caption: 'Wedding Day', orientation: 'vertical' },
 ];
 
 const PhotoGallery: React.FC = () => {
