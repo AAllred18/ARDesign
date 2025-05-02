@@ -1,36 +1,49 @@
+import { Mail } from 'lucide-react';
+
 const Footer: React.FC = () => {
-    return (
-      <div className="footer text-center pt-6 pb-4">
-        {/* Horizontal line above footer */}
-        <hr
-          style={{
-            borderTop: '2px solid #4682B4',
-            width: '95%',
-            margin: '20px auto 16px auto',
-          }}
-        />
-  
-        {/* LinkedIn Icon */}
+  return (
+    <footer className="text-center pt-6 pb-4 text-sm text-gray-600">
+      {/* Divider */}
+      <hr
+        style={{
+          borderTop: '2px solid #4682B4',
+          width: '95%',
+          margin: '20px auto 16px auto',
+        }}
+      />
+
+      {/* Icon Row */}
+      <div className="flex justify-center items-center gap-6 mb-2">
+        {/* LinkedIn */}
         <a
           href="https://www.linkedin.com/in/andrew-allred2024/"
           target="_blank"
           rel="noopener noreferrer"
+          className="hover:opacity-80 transition"
         >
           <img
             src="/LinkedIn.png"
             alt="LinkedIn"
-            className="mx-auto mb-2"
             style={{ width: "24px", height: "24px" }}
           />
         </a>
-  
-        {/* Footer Text */}
-        <div className="text-sm text-gray-600">
-          &copy; A&amp;R Design {new Date().getFullYear()}
-        </div>
+
+        {/* Email */}
+        <a
+          href="mailto:andrewallred509@gmail.com"
+          className="flex flex-col items-center text-blue-600 hover:underline transition"
+        >
+          <Mail className="w-5 h-5 mb-1" />
+          <span className="text-xs">Email Me</span>
+        </a>
       </div>
-    );
-  };
-  
-  export default Footer;
-  
+
+      {/* Footer Text */}
+      <div>
+        &copy; A&amp;R Design {new Date().getFullYear()}
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

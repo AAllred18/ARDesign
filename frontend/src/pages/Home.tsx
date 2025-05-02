@@ -76,6 +76,7 @@ const Home: React.FC = () => {
             }}
           >
             {/* Welcome Line */}
+            <div className="sm:mt-4 md:mt-8 lg:mt-12 "></div>
             <div className="w-full max-w-[90vw] md:max-w-[700px] mx-auto fade-in-up">
               <svg
                 viewBox="0 -80 1100 300"

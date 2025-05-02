@@ -42,6 +42,26 @@
     opacity: 0; /* start hidden */
   }
 
+@media (min-width: 700px) and (max-width: 1000px) {
+  .svg-welcome {
+    font-size: 135px; /* Adjust as needed */
+  }
+
+  .svg-subtitle {
+    font-size: 35px; /* Adjust for better fit */
+  }
+}
+
+@media (min-width: 601px) and (max-width: 700px) {
+  .svg-welcome {
+    font-size: 150px; /* Adjust as needed */
+  }
+
+  .svg-subtitle {
+    font-size: 40px; /* Adjust for better fit */
+  }
+}
+
     /* Zoomed-in vertical mobile style */
 @media (max-width: 600px) {
     .image-container {
