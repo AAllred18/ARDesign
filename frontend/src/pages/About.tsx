@@ -33,8 +33,8 @@ const About: React.FC = () => {
 
                     <p>
                         From an early age, I found myself drawn to technology—not just as a tool, but as a way to solve problems and bring ideas to life. 
-                        This passion led me to Brigham Young University, where I’m currently pursuing a Bachelor of Science in <strong>Information Systems</strong> 
-                        at the STEM-certified <strong>Marriott School of Business</strong>.
+                        This passion led me to Brigham Young University, where I’m currently pursuing a Bachelor of Science in <strong>Information Systems</strong> at
+                        the STEM-certified <strong>Marriott School of Business</strong>.
                     </p>
 
                     <br />

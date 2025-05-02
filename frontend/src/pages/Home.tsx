@@ -21,7 +21,7 @@ const imageMap: Record<string, string> = {
 const sections = [
   { title: 'About Me', path: '/about', description: 'Learn more about my background and journey.' },
   { title: 'Resume', path: '/resume', description: 'Explore my skills and experience in detail.' },
-  { title: 'Portfolio', path: '/projects', description: 'See my latest projects and accomplishments.' },
+  { title: 'Portfolio', path: '/portfolio', description: 'See my latest projects and accomplishments.' },
   { title: 'Contact', path: '/contact', description: 'Let’s get in touch!' }
 ];
 

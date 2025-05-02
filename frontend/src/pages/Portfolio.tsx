@@ -1,15 +1,130 @@
+import React, { useState } from 'react';
 import Layout from "../components/Layout";
+import projects from "../data/Projects";
+
+interface Project {
+  title: string;
+  date: string;
+  description: string;
+  longDescription: string;
+  image: string;
+  repoLink: string;
+  liveLink?: string;
+  tech: string[];
+}
 
 const Portfolio: React.FC = () => {
-    return (
-        <Layout>
-            <div>
-                <h1>Projects</h1>
-                <p>This is the Projects Page.</p>
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  return (
+    <Layout>
+      <div>
+        {/* Promo Section */}
+        <div
+          style={{
+            backgroundColor: '#f0f8ff',
+            textAlign: 'center',
+            padding: '30px 16px',
+            fontSize: '2rem',
+            fontWeight: 'bold',
+            color: '#1e3a8a',
+          }}
+        >
+          Portfolio
+        </div>
+
+        {/* Portfolio Grid Section */}
+        <section className="py-12 px-4 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer"
+                onClick={() => setSelectedProject(project)}
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-center items-center text-white text-center px-4">
+                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                  <p className="text-sm mb-4">{project.description}</p>
+                  <span className="text-blue-400 underline">View Project</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Modal */}
+        {selectedProject && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-70 z-50 flex justify-center items-start px-4 pt-20 pb-6"
+            onClick={() => setSelectedProject(null)}
+          >
+            <div
+              className="bg-white rounded-lg max-w-2xl w-full h-[85vh] overflow-y-auto relative"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close Button */}
+              <button
+                className="absolute top-3 right-4 text-gray-500 hover:text-gray-700 bg-gray-200 hover:bg-gray-300 p-1 rounded-full transition"
+                onClick={() => setSelectedProject(null)}
+                aria-label="Close Modal"
+              >
+                <span className="text-xl font-bold">&times;</span>
+              </button>
+
+              {/* Scrollable Modal Content */}
+              <div className="p-6 pt-14">
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="w-full h-64 object-cover rounded-md mb-4"
+                />
+                <h2 className="text-2xl font-bold mb-2">{selectedProject.title}</h2>
+                <h4 className="text-base font-semibold mb-4 text-gray-600">{selectedProject.date}</h4>
+                <p className="text-gray-700 mb-4 whitespace-pre-line">
+                  {selectedProject.longDescription}
+                </p>
+
+                <div className="mb-4">
+                  <h3 className="font-semibold mb-1">Technologies Used:</h3>
+                  <ul className="list-disc list-inside text-gray-600">
+                    {selectedProject.tech.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="flex gap-4 mt-4">
+                  <a
+                    href={selectedProject.repoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded"
+                  >
+                    View Repo
+                  </a>
+                  {selectedProject.liveLink && (
+                    <a
+                      href={selectedProject.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white bg-green-600 hover:bg-green-700 px-4 py-2 rounded"
+                    >
+                      View Site
+                    </a>
+                  )}
+                </div>
+              </div>
             </div>
-        </Layout>
-    );
-  };
-  
-  export default Portfolio;
-  
+          </div>
+        )}
+      </div>
+    </Layout>
+  );
+};
+
+export default Portfolio;
