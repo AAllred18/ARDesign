@@ -38,7 +38,6 @@ const Navbar: React.FC = () => {
             <Link to="/" className="nav-link">Home</Link>
             <Link to="/about" className="nav-link">About</Link>
             <Link to="/projects" className="nav-link">Projects</Link>
-            <Link to="/skills" className="nav-link">Skills</Link>
             <Link to="/resume" className="nav-link">Resume</Link>
             <Link to="/contact" className="nav-link">Contact</Link>
           </div>
@@ -51,7 +50,6 @@ const Navbar: React.FC = () => {
             { name: 'Home', path: '/' },
             { name: 'About', path: '/about' },
             { name: 'Projects', path: '/projects' },
-            { name: 'Skills', path: '/skills' },
             { name: 'Resume', path: '/resume' },
             { name: 'Contact', path: '/contact' },
           ].map((link) => (
