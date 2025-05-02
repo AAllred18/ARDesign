@@ -83,7 +83,7 @@ const Home: React.FC = () => {
                 className="w-full h-auto svg-welcome-wrapper"
               >
                 <text
-                  x={isMobile ? "53%" : "50%"}
+                  x={isMobile ? "51%" : "50%"}
                   y={isMobile ? 180 : 200}
                   fontSize={isMobile ? 250 : 200}
                   fontWeight="bold"
@@ -98,7 +98,7 @@ const Home: React.FC = () => {
                   Welcome
                 </text>
                 <text
-                  x={isMobile ? "53%" : "50%"}
+                  x={isMobile ? "51%" : "50%"}
                   y={isMobile ? 180 : 200}
                   fontSize={isMobile ? 250 : 200}
                   fontWeight="bold"
