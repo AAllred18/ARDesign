@@ -1,6 +1,6 @@
 import Layout from "../components/Layout";
 
-const Projects: React.FC = () => {
+const Portfolio: React.FC = () => {
     return (
         <Layout>
             <div>
@@ -11,5 +11,5 @@ const Projects: React.FC = () => {
     );
   };
   
-  export default Projects;
+  export default Portfolio;
   
