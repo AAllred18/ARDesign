@@ -9,9 +9,9 @@ interface FlipCardProps {
 
 const FlipCard: React.FC<FlipCardProps> = ({ title, description, path, image }) => {
   return (
-    <div className="relative group w-[280px] h-[280px] perspective" style={{ margin: '16px' }}>
+    <div className="relative group w-[280px] h-[280px] perspective m-4">
       <Link to={path} className="block w-full h-full">
-        <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+        <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover-rotate-y-180">
 
           {/* Front Side */}
           <div className="absolute w-full h-full backface-hidden rounded-xl border-[2px] border-[#1e3a8a] overflow-hidden shadow-md bg-white">

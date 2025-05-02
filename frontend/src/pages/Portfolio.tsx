@@ -89,35 +89,42 @@ const Portfolio: React.FC = () => {
                   {selectedProject.longDescription}
                 </p>
 
-                <div className="mb-4">
-                  <h3 className="font-semibold mb-1">Technologies Used:</h3>
-                  <ul className="list-disc list-inside text-gray-600">
-                    {selectedProject.tech.map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
+                <div className="flex flex-wrap gap-2">
+                  {selectedProject.tech.map((item, i) => (
+                    <span
+                      key={i}
+                      className="inline rounded-md px-2 py-1 text-xs font-medium text-white bg-[#4682B4]"
+                    >
+                      {item}
+                    </span>
+                  ))}
                 </div>
 
+
                 <div className="flex gap-4 mt-4">
+                {/* Outlined Button - Repo */}
+                <a
+                  href={selectedProject.repoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded border border-blue-600 text-blue-600 bg-white hover:bg-blue-600 hover:text-white transition duration-300"
+                >
+                  View Repo
+                </a>
+
+                {/* Filled Button - Live Site */}
+                {selectedProject.liveLink && (
                   <a
-                    href={selectedProject.repoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded"
-                  >
-                    View Repo
+                  href={selectedProject.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded border border-blue-600 text-blue-600 bg-white hover:bg-blue-600 hover:text-white transition duration-300"
+                >
+                    View Site
                   </a>
-                  {selectedProject.liveLink && (
-                    <a
-                      href={selectedProject.liveLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white bg-green-600 hover:bg-green-700 px-4 py-2 rounded"
-                    >
-                      View Site
-                    </a>
-                  )}
-                </div>
+                )}
+              </div>
+
               </div>
             </div>
           </div>

@@ -11,7 +11,7 @@ const projects = [
       image: CinenicheImage,
       repoLink: "https://github.com/AAllred18/IntexDos/tree/main",
       liveLink: "https://moviesappsa79595.z22.web.core.windows.net/",
-      tech: ["React", "Node.js", "MongoDB", "Tailwind"]
+      tech: ["React", "Node.js", "Azure Blobstorage", "Bootstrap"]
     }
   ];  
   

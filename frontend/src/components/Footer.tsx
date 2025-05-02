@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
           <img
             src="/LinkedIn.png"
             alt="LinkedIn"
-            style={{ width: "24px", height: "24px" }}
+            style={{ width: "25px", height: "25px" }}
           />
         </a>
 
@@ -33,8 +33,7 @@ const Footer: React.FC = () => {
           href="mailto:andrewallred509@gmail.com"
           className="flex flex-col items-center text-blue-600 hover:underline transition"
         >
-          <Mail className="w-5 h-5 mb-1" />
-          <span className="text-xs">Email Me</span>
+          <Mail className="w-7 h-7 mb-1" />
         </a>
       </div>
 

@@ -50,6 +50,18 @@ h1 {
   font-style: normal;
 }
 
+.perspective {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
