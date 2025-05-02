@@ -20,9 +20,9 @@ const FlipCard: React.FC<FlipCardProps> = ({ title, description, path, image }) 
               alt={title}
               className="w-full h-full object-cover"
             />
-            <div className="absolute bottom-0 left-0 right-0 bg-[#1e3a8a]/80 text-white text-center text-lg font-semibold p-1">
+            {/* <div className="absolute bottom-0 left-0 right-0 bg-[#1e3a8a]/80 text-white text-center text-lg font-semibold p-1">
               {title}
-            </div>
+            </div> */}
           </div>
 
           {/* Back Side */}

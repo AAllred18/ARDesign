@@ -78,7 +78,7 @@ const Resume: React.FC = () => {
                         <div
                             className="w-full border shadow-lg"
                             style={{
-                            maxWidth: window.innerWidth >= 768 ? "100vw" : "85vw",
+                            maxWidth: window.innerWidth >= 768 ? "90vw" : "80vw",
                             height: height,
                             }}
                         >

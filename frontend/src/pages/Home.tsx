@@ -75,16 +75,17 @@ const Home: React.FC = () => {
               margin: "0 auto"
             }}
           >
-            <div className="w-full max-w-[90vw] md:max-w-[600px] mx-auto fade-in-up">
+            {/* Welcome Line */}
+            <div className="w-full max-w-[90vw] md:max-w-[700px] mx-auto fade-in-up">
               <svg
-                viewBox="0 -55 1100 260"
+                viewBox="0 -80 1100 300"
                 preserveAspectRatio="xMidYMid meet"
                 className="w-full h-auto svg-welcome-wrapper"
               >
                 <text
                   x={isMobile ? "53%" : "50%"}
-                  y={isMobile ? 150 : 200}
-                  fontSize="90"
+                  y={isMobile ? 180 : 200}
+                  fontSize={isMobile ? 250 : 200}
                   fontWeight="bold"
                   fill="white"
                   stroke="#4682B4"
@@ -98,8 +99,8 @@ const Home: React.FC = () => {
                 </text>
                 <text
                   x={isMobile ? "53%" : "50%"}
-                  y={isMobile ? 150 : 200}
-                  fontSize="90"
+                  y={isMobile ? 180 : 200}
+                  fontSize={isMobile ? 250 : 200}
                   fontWeight="bold"
                   fill="white"
                   fontFamily="inherit"
@@ -111,15 +112,16 @@ const Home: React.FC = () => {
               </svg>
             </div>
 
+            {/* Subtitle Line 1 */}
             <div
-              className="w-full max-w-[90vw] md:max-w-[700px] mt-4 mx-auto fade-in-up"
+              className="w-full max-w-[90vw] md:max-w-[700px] mx-auto fade-in-up"
               style={{ animationDelay: "1s", animationFillMode: "forwards" }}
             >
-              <svg viewBox="0 -60 1000 80" preserveAspectRatio="xMidYMid meet" className="w-full h-auto">
-              <text
+              <svg viewBox="0 0 1000 100" preserveAspectRatio="xMidYMid meet" className="w-full h-auto">
+                <text
                   x={isMobile ? "53%" : "50%"}
-                  y={isMobile ? 5 : 10}
-                  fontSize="35"
+                  y={isMobile ? 65 : 60}
+                  fontSize={isMobile ? 65 : 45}
                   fontWeight="bold"
                   fill="white"
                   stroke="#4682B4"
@@ -133,8 +135,8 @@ const Home: React.FC = () => {
                 </text>
                 <text
                   x={isMobile ? "53%" : "50%"}
-                  y={isMobile ? 5 : 10}
-                  fontSize="35"
+                  y={isMobile ? 65 : 60}
+                  fontSize={isMobile ? 65 : 45}
                   fontWeight="bold"
                   fill="white"
                   fontFamily="inherit"
@@ -146,16 +148,16 @@ const Home: React.FC = () => {
               </svg>
             </div>
 
-            {/* Line 2 */}
+            {/* Subtitle Line 2 */}
             <div
-              className="w-full max-w-[90vw] md:max-w-[700px] mt-4 mx-auto fade-in-up"
+              className="w-full max-w-[90vw] md:max-w-[700px] mx-auto fade-in-up"
               style={{ animationDelay: "1.5s", animationFillMode: "forwards" }}
             >
-              <svg viewBox="0 15 1000 80" preserveAspectRatio="xMidYMid meet" className="w-full h-auto">
-              <text
+              <svg viewBox="0 0 1000 100" preserveAspectRatio="xMidYMid meet" className="w-full h-auto">
+                <text
                   x={isMobile ? "53%" : "50%"}
-                  y={isMobile ? 82 : 60}
-                  fontSize="35"
+                  y={isMobile ? 70 : 45}
+                  fontSize={isMobile ? 65 : 45}
                   fontWeight="bold"
                   fill="white"
                   stroke="#4682B4"
@@ -169,8 +171,8 @@ const Home: React.FC = () => {
                 </text>
                 <text
                   x={isMobile ? "53%" : "50%"}
-                  y={isMobile ? 82 : 60}
-                  fontSize="35"
+                  y={isMobile ? 70 : 45}
+                  fontSize={isMobile ? 65 : 45}
                   fontWeight="bold"
                   fill="white"
                   fontFamily="inherit"
@@ -182,16 +184,16 @@ const Home: React.FC = () => {
               </svg>
             </div>
 
-            {/* Line 3 */}
+            {/* Subtitle Line 3 */}
             <div
-              className="w-full max-w-[90vw] md:max-w-[700px] mt-4 mx-auto fade-in-up"
+              className="w-full max-w-[90vw] md:max-w-[700px] mx-auto fade-in-up"
               style={{ animationDelay: "2s", animationFillMode: "forwards" }}
             >
-              <svg viewBox="0 0 1000 80" preserveAspectRatio="xMidYMid meet" className="w-full h-auto">
-              <text
+              <svg viewBox="0 0 1000 100" preserveAspectRatio="xMidYMid meet" className="w-full h-auto">
+                <text
                   x={isMobile ? "53%" : "50%"}
-                  y={isMobile ? 65 : 25}
-                  fontSize="35"
+                  y={isMobile ? 80 : 35}
+                  fontSize={isMobile ? 65 : 45}
                   fontWeight="bold"
                   fill="white"
                   stroke="#4682B4"
@@ -205,8 +207,8 @@ const Home: React.FC = () => {
                 </text>
                 <text
                   x={isMobile ? "53%" : "50%"}
-                  y={isMobile ? 65 : 25}
-                  fontSize="35"
+                  y={isMobile ?80 : 35}
+                  fontSize={isMobile ? 65 : 45}
                   fontWeight="bold"
                   fill="white"
                   fontFamily="inherit"
@@ -217,6 +219,7 @@ const Home: React.FC = () => {
                 </text>
               </svg>
             </div>
+
 
           </div>
         </div>

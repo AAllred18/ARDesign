@@ -15,14 +15,16 @@
     transition: all 0.3s ease;
 }
 
-    /* Default desktop sizes */
+/* Default desktop sizes */
 .svg-welcome {
-    font-size: 90px;
-}
+    font-size: 200px; /* was 90px */
+    line-height: 1;
+  }
   
-.svg-subtitle {
-    font-size: 30px;
-}
+  .svg-subtitle {
+    font-size: 45px; /* was 30px */
+    line-height: 1;
+  }
 
 @keyframes fadeInUp {
     0% {

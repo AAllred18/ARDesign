@@ -1,63 +1,82 @@
 import Layout from "../components/Layout";
-import { Mail, Phone, MapPin, Linkedin, Github, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
+import professionalHeadshot from "../assets/AJ.png";
 
 const Contact: React.FC = () => {
   return (
     <Layout>
-      <div className="container py-5">
-        <div className="row align-items-center">
-          {/* Left Side: Image */}
-          <div className="col-md-5 mb-4 mb-md-0 text-center">
-            <img 
-              src="https://via.placeholder.com/350x350.png?text=Your+Photo" 
-              alt="Profile" 
-              className="img-fluid rounded-circle shadow" 
-              style={{ maxWidth: "300px" }}
+      <div className="py-8 px-4 sm:px-8 max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="bg-blue-50 text-blue-900 text-center py-6 text-3xl font-bold rounded-md mb-8">
+          Contact Me
+        </div>
+
+        {/* Main Section */}
+        <div className="flex flex-col md:flex-row justify-center items-start gap-12">
+          {/* Left: Image */}
+          <div className="flex justify-center md:justify-end">
+            <img
+              src={professionalHeadshot}
+              alt="Profile"
+              className="w-full max-w-xs md:max-w-md rounded-2xl shadow-lg"
             />
           </div>
 
-          {/* Right Side: Contact Information */}
-          <div className="col-md-7">
-            <h1 className="display-4 mb-4 text-center text-md-start">Contact Me</h1>
-            <p className="lead mb-5 text-center text-md-start">
-              I'd love to hear from you! Feel free to reach out through any of the options below.
-            </p>
-
-            <div className="list-group list-group-flush">
-              {/* Email */}
-              <a href="mailto:your.email@example.com" className="list-group-item list-group-item-action d-flex align-items-center mb-3">
-                <Mail className="me-3 text-primary" size={28} />
-                <span>your.email@example.com</span>
-              </a>
-
-              {/* Phone */}
-              <div className="list-group-item d-flex align-items-center mb-3">
-                <Phone className="me-3 text-success" size={28} />
-                <span>+1 (123) 456-7890</span>
+          {/* Right: Contact Info */}
+          <div className="flex flex-col items-center md:items-start w-full">
+            <div className="w-full max-w-2xl space-y-6">
+              <div>
+                <h2 className="text-2xl font-semibold text-center md:text-left mb-2">Let's Connect</h2>
+                <p className="text-gray-700 text-center md:text-left">
+                  I'd love to hear from you! Reach out through any of the options below.
+                </p>
               </div>
 
-              {/* Location */}
-              <div className="list-group-item d-flex align-items-center mb-3">
-                <MapPin className="me-3 text-danger" size={28} />
-                <span>City, State, Country</span>
-              </div>
+              <div className="space-y-4">
+                {/* Email */}
+                <a
+                  href="mailto:andrewallred509@gmail.com"
+                  className="flex items-center text-gray-800 hover:text-blue-600 transition"
+                >
+                  <Mail className="w-6 h-6 mr-3 text-blue-600" />
+                  andrewallred509@gmail.com
+                </a>
 
-              {/* Socials */}
-              <div className="mt-4">
-                <h5 className="mb-3">Connect with me:</h5>
-                <div className="d-flex gap-4">
-                  <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-primary">
-                    <Linkedin size={32} />
-                  </a>
-                  <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-dark">
-                    <Github size={32} />
-                  </a>
-                  <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-info">
-                    <Twitter size={32} />
-                  </a>
+                {/* Phone */}
+                <div className="flex items-center text-gray-800">
+                  <Phone className="w-6 h-6 mr-3 text-blue-600" />
+                  +1 (808) 464-0959
+                </div>
+
+                {/* Location */}
+                <div className="flex items-center text-gray-800">
+                  <MapPin className="w-6 h-6 mr-3 text-blue-600" />
+                  Provo, UT, USA
                 </div>
               </div>
 
+              {/* Socials */}
+              <div>
+                <h3 className="text-lg font-medium mb-2">Connect with me:</h3>
+                <div className="flex gap-5 justify-center md:justify-start">
+                  <a
+                    href="https://www.linkedin.com/in/andrew-allred2024/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-700 hover:opacity-80 transition"
+                  >
+                    <Linkedin className="w-8 h-8" />
+                  </a>
+                  <a
+                    href="https://github.com/AAllred18"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-800 hover:opacity-80 transition"
+                  >
+                    <Github className="w-8 h-8" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
