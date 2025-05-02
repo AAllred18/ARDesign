@@ -55,12 +55,11 @@
         object-position: 35% top; 
     }
     .svg-welcome {
-        font-size: 200px; /* larger for mobile */
-        y: 120;
+        font-size: 250px; /* larger for mobile */
     }
     
     .svg-subtitle {
-        font-size: 56px; /* slightly larger */
+        font-size: 65px; /* slightly larger */
     }
 }
 

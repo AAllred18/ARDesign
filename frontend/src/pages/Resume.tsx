@@ -1,7 +1,25 @@
 import Layout from "../components/Layout";
 import AndrewResume from '../assets/AndrewAllredResume.pdf'
+import { useEffect, useState } from "react";
 
 const Resume: React.FC = () => {
+    const [height, setHeight] = useState("70vh");
+
+    useEffect(() => {
+        const updateHeight = () => {
+        const width = window.innerWidth;
+        if (width >= 768) {
+            setHeight("100vh"); // md and up
+        } else {
+            setHeight("60vh"); // mobile
+        }
+        };
+
+        updateHeight();
+        window.addEventListener("resize", updateHeight);
+        return () => window.removeEventListener("resize", updateHeight);
+    }, []);
+
     return (
         <Layout>
             <div className="min-h-screen flex flex-col bg-white">
@@ -57,16 +75,23 @@ const Resume: React.FC = () => {
 
                     {/* Resume Viewer */}
                     <div className="flex justify-center w-full mb-6">
-                        <div className="w-[80vw] h-[90vh] border shadow-lg">
+                        <div
+                            className="w-full border shadow-lg"
+                            style={{
+                            maxWidth: window.innerWidth >= 768 ? "100vw" : "85vw",
+                            height: height,
+                            }}
+                        >
                             <iframe
-                                src={AndrewResume}
-                                className="w-full h-full"
-                                title="Andrew Allred Resume"
+                            src={AndrewResume}
+                            className="w-full h-full"
+                            title="Andrew Allred Resume"
+                            style={{ border: "none" }}
                             />
                         </div>
                     </div>
 
-                    <br></br>
+                    <br/>
 
                 </div>
             </div>
