@@ -181,19 +181,35 @@
   font-size: 15px;
 }
 
-  
-  /* --- Responsive Adjustments --- */
-  @media (max-width: 1024px) {
-    .polaroid-gallery {
-      max-width: 700px;
-    }
+@media (min-width: 1150px) {
+  .polaroid-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
   }
-  
-  @media (max-width: 600px) {
-    .polaroid-gallery {
-      max-width: 95%;
-      padding: 20px;
-      gap: 15px;
-    }
+
+  .polaroid {
+    flex: none; /* Prevent auto resizing */
   }
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1024px) {
+  .polaroid-gallery {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 600px) {
+  .polaroid-gallery {
+    max-width: 95%;
+    padding: 20px;
+    gap: 15px;
+  }
+}
   

@@ -9,6 +9,9 @@ import HawaiiImage from '../assets/Hawaii.jpg';
 import FamilyChristmasImage from '../assets/FamilyChristmas.jpg';
 import BYUFootballImage from '../assets/BYUFootballGame.jpg';
 import WeddingImage from '../assets/WeddingDay.jpg';
+import KauaiImage from '../assets/Kauai.jpeg';
+import ISEventImage from '../assets/ISEvent.jpeg';
+import MoabImage from '../assets/Moab.jpeg';
 
 interface GalleryImage {
   src: string;
@@ -20,9 +23,11 @@ const images: GalleryImage[] = [
   { src: ProposalImage, caption: 'The Day I proposed to Reagan', orientation: 'horizontal' },
   { src: HawaiiImage, caption: 'Exploring Keauhou Bay', orientation: 'vertical' },
   { src: FamilyChristmasImage, caption: 'Family Christmas in Idaho', orientation: 'horizontal' },
+  { src: ISEventImage, caption: 'Attending an IS Event', orientation: 'vertical' },
   { src: BYUFootballImage, caption: 'BYU Football Game', orientation: 'vertical' },
-  { src: ProposalImage, caption: 'Photo 3.1', orientation: 'horizontal' }, // reuse works fine
-  { src: WeddingImage, caption: 'Wedding Day', orientation: 'vertical' },
+  { src: MoabImage, caption: 'Trip to Moab', orientation: 'horizontal' }, // reuse works fine
+  { src: WeddingImage, caption: 'Our Wedding Day', orientation: 'vertical' },
+  { src: KauaiImage, caption: 'Visiting Kauai', orientation: 'horizontal' },
 ];
 
 const PhotoGallery: React.FC = () => {
