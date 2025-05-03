@@ -1,13 +1,24 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import './Navbar.css';
 import logo from '../assets/ARClearLogo.png';
 
+const navItems = [
+  { name: 'Home', path: '/' },
+  { name: 'About', path: '/about' },
+  { name: 'Portfolio', path: '/portfolio' },
+  { name: 'Resume', path: '/resume' },
+  { name: 'Contact', path: '/contact' },
+];
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const location = useLocation();
+
+  const underlineRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -24,7 +35,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo ">
+        <Link to="/" className="navbar-logo">
           <img src={logo} alt="Logo" className="logo-image" />
           <span>A&R Design</span>
         </Link>
@@ -34,25 +45,34 @@ const Navbar: React.FC = () => {
             {isMenuOpen ? '✖' : '☰'}
           </button>
         ) : (
-          <div className="navbar-links">
-            <Link to="/" className="nav-link">Home</Link>
-            <Link to="/about" className="nav-link">About</Link>
-            <Link to="/portfolio" className="nav-link">Portfolio</Link>
-            <Link to="/resume" className="nav-link">Resume</Link>
-            <Link to="/contact" className="nav-link">Contact</Link>
+          <div className="navbar-links" ref={containerRef}>
+            {navItems.map((item) => {
+              const isActive = location.pathname === item.path;
+              return (
+                <div key={item.name} className="nav-link-wrapper">
+                  <Link
+                    to={item.path}
+                    className="nav-link"
+                  >
+                    {item.name}
+                    {isActive && (
+                      <motion.div
+                        layoutId="underline"
+                        className="nav-underline"
+                        transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                      />
+                    )}
+                  </Link>
+                </div>
+              );
+            })}
           </div>
         )}
       </div>
 
       {isMobile && isMenuOpen && (
         <div className="mobile-dropdown">
-          {[
-            { name: 'Home', path: '/' },
-            { name: 'About', path: '/about' },
-            { name: 'Portfolio', path: '/portfolio' },
-            { name: 'Resume', path: '/resume' },
-            { name: 'Contact', path: '/contact' },
-          ].map((link) => (
+          {navItems.map((link) => (
             <Link
               key={link.name}
               to={link.path}

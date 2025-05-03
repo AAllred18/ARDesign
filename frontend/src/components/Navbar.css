@@ -77,3 +77,40 @@
     box-sizing: border-box;
   }
   
+  .navbar-links {
+    display: flex;
+    gap: 24px;
+    font-size: 18px;
+    font-weight: 500;
+    align-items: center;
+    position: relative;
+  }
+  
+  .nav-link-wrapper {
+    position: relative;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 4px 0;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    opacity: 0.8;
+  }
+  
+  .nav-underline {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    border-radius: 1px;
+  }
+  
+  
