@@ -1,9 +1,29 @@
 // Import images here
+import ARImage from '/ARBlueLogo.png'
 import CinenicheImage from '../assets/Cineniche.png'
 import TurtleShelterImage from '../assets//TurtleShelterProject.png'
 import CCLMImage from '../assets/CCLM.png'
 
 const projects = [
+    {
+      title: "A&R Design Portfolio",
+      date: "05/02/2025",
+      description: "A responsive personal portfolio website with animations, galleries, and interactive resume sections.",
+      longDescription:
+        "A&R Design is my personal portfolio website designed to showcase my professional journey, technical projects, and visual storytelling through an interactive experience. Built using HTML, CSS, JavaScript, and React, the site features animated SVG intros, a polaroid-style photo gallery, and a custom interactive resume layout. It also integrates responsive design, downloadable resume links, and project cards using reusable components.\n\nEach section was built with accessibility and user clarity in mind, blending technical proficiency with personal design aesthetics. The site includes framer-motion transitions, a contact form, and embedded component-based pages for About, Resume, Portfolio, and Contact views. Feel free to continue learning more about my work, skills, and story.",
+      image: ARImage,
+      repoLink: "https://github.com/AAllred18/ARDesign",
+      liveLink: "https://ar-design.vercel.app/",
+      tech: [
+        "React",                     // Frontend Framework
+        "TypeScript",                // Language Support
+        "Tailwind CSS",              // Styling System
+        "Framer Motion",             // Animation Library
+        "Lucide Icons",              // Icon Library
+        "Responsive Design",         // Mobile/Desktop Optimization
+        "Component Architecture"     // Code Structure/Scalability
+      ]
+    },
     {
       title: "CineNiche Streaming Platform",
       date: "04/11/2025",
