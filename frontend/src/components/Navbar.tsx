@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const location = useLocation();
 
-  const underlineRef = useRef<HTMLDivElement>(null);
+  // const underlineRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
