@@ -123,13 +123,20 @@ const PhotoGallery: React.FC = () => {
 
       {/* Modal View */}
       {modalOpen && (
-        <div className="modal open" onClick={handleBackdropClick}>
-          <button className="close-btn" onClick={closeModal}>
-            &times;
-          </button>
-          <img src={currentImage} alt="Expanded" onClick={(e) => e.stopPropagation()} />
-        </div>
-      )}
+  <div className="modal open" onClick={handleBackdropClick}>
+    <div className="modal-content-wrapper">
+      <button className="close-btn" onClick={closeModal}>
+        &times;
+      </button>
+      <img
+        src={currentImage}
+        alt="Expanded"
+        className="modal-image"
+        onClick={(e) => e.stopPropagation()}
+      />
+    </div>
+  </div>
+)}
     </div>
   );
 };

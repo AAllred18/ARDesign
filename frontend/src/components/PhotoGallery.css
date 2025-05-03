@@ -78,23 +78,35 @@
     display: flex;
   }
   
-  .modal img {
-    max-width: 90%;
-    max-height: 80%;
-    object-fit: contain;
+  .modal-content-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .modal-image {
+    max-width: 90vw;
+    max-height: 80vh;
     border-radius: 10px;
   }
   
   .close-btn {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    right: 5px;
+    top: 5px;
+    background: rgba(0, 0, 0, 0.3);
     color: white;
-    font-size: 30px;
-    background: transparent;
+    font-size: 24px;
     border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+  
 
 /* Mobile Swiper Wrapper */
 .mobile-swiper-wrapper {

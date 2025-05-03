@@ -1,45 +1,44 @@
-import { Mail } from 'lucide-react';
+import { Mail, Linkedin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="text-center pt-6 pb-4 text-sm text-gray-600">
-      {/* Divider */}
-      <hr
-        style={{
-          borderTop: '2px solid #4682B4',
-          width: '95%',
-          margin: '20px auto 16px auto',
-        }}
-      />
+    <footer
+      className="bg-white pt-6 pb-4 text-sm text-gray-600 mt-12"
+      style={{ borderTop: '2px solid #4682B4' }}
+    >
+      <div className="max-w-4xl mx-auto px-4 flex flex-col items-center space-y-4">
 
-      {/* Icon Row */}
-      <div className="flex justify-center items-center gap-6 mb-2">
-        {/* LinkedIn */}
+        {/* Icon Row */}
+        <div className="flex gap-6">
         <a
           href="https://www.linkedin.com/in/andrew-allred2024/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:opacity-80 transition"
+          aria-label="LinkedIn"
+          className="transition"
+          style={{ color: "#4682B4" }}
+          onMouseEnter={(e) => (e.currentTarget.style.color = "#315f7d")}
+          onMouseLeave={(e) => (e.currentTarget.style.color = "#4682B4")}
         >
-          <img
-            src="/LinkedIn.png"
-            alt="LinkedIn"
-            style={{ width: "25px", height: "25px" }}
-          />
+          <Linkedin className="w-6 h-6" />
         </a>
 
-        {/* Email */}
         <a
           href="mailto:andrewallred509@gmail.com"
-          className="flex flex-col items-center text-blue-600 hover:underline transition"
+          aria-label="Email"
+          className="transition"
+          style={{ color: "#4682B4" }}
+          onMouseEnter={(e) => (e.currentTarget.style.color = "#315f7d")}
+          onMouseLeave={(e) => (e.currentTarget.style.color = "#4682B4")}
         >
-          <Mail className="w-7 h-7 mb-1" />
+          <Mail className="w-6 h-6" />
         </a>
-      </div>
+        </div>
 
-      {/* Footer Text */}
-      <div>
-        &copy; A&amp;R Design {new Date().getFullYear()}
+        {/* Footer Text */}
+        <div className="text-center text-gray-500">
+          &copy; {new Date().getFullYear()} A&amp;R Design &mdash; All rights reserved
+        </div>
       </div>
     </footer>
   );
