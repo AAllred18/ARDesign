@@ -20,7 +20,7 @@ interface GalleryImage {
 }
 
 const images: GalleryImage[] = [
-  { src: ProposalImage, caption: 'The Day I proposed to Reagan', orientation: 'horizontal' },
+  { src: ProposalImage, caption: 'The day I proposed to Reagan', orientation: 'horizontal' },
   { src: HawaiiImage, caption: 'Exploring Keauhou Bay', orientation: 'vertical' },
   { src: FamilyChristmasImage, caption: 'Family Christmas in Idaho', orientation: 'horizontal' },
   { src: ISEventImage, caption: 'Attending an IS Event', orientation: 'vertical' },

@@ -2,20 +2,14 @@ import Layout from "../components/Layout";
 import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
 import professionalHeadshot from "../assets/AJ.png";
 import { motion } from "framer-motion";
+import SectionHeader from "../components/SectionHeader";
 
 const Contact: React.FC = () => {
   return (
     <Layout>
       <div className="py-8 px-4 sm:px-8 max-w-6xl mx-auto">
         {/* Header */}
-        <motion.div
-          className="bg-blue-50 text-blue-900 text-center py-6 text-3xl font-bold rounded-md mb-8"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          Contact Me
-        </motion.div>
+        <SectionHeader text="Contact Me" />
 
         {/* Main Section */}
         <div className="flex flex-col md:flex-row justify-center items-start gap-12">

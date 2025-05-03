@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Layout from "../components/Layout";
 import projects from "../data/Projects";
+import SectionHeader from '../components/SectionHeader';
 
 interface Project {
   title: string;
@@ -20,18 +21,7 @@ const Portfolio: React.FC = () => {
     <Layout>
       <div>
         {/* Promo Section */}
-        <div
-          style={{
-            backgroundColor: '#f0f8ff',
-            textAlign: 'center',
-            padding: '30px 16px',
-            fontSize: '2rem',
-            fontWeight: 'bold',
-            color: '#1e3a8a',
-          }}
-        >
-          Portfolio
-        </div>
+        <SectionHeader text="Portfolio" />
 
         {/* Technical Skills Section */}
         <section className="py-12 px-4 max-w-5xl mx-auto">
