@@ -33,8 +33,69 @@ const Portfolio: React.FC = () => {
           Portfolio
         </div>
 
+        {/* Technical Skills Section */}
+        <section className="py-12 px-4 max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold text-blue-900 mb-6 text-center">Technical Skills</h2>
+
+          <div className="space-y-6">
+            {/* Proficient In */}
+            <div>
+              <h3 className="text-lg font-semibold text-gray-700 mb-2">Proficient In:</h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Figma",
+                  "Git",
+                  "HTML/CSS",
+                  "JavaScript",
+                  "Microsoft Excel (VBA, PivotTables)",
+                  "Python",
+                  "SQL",
+                  "Tableau"
+                ].map((skill, index) => (
+                  <span key={index} className="inline-block bg-[#4682B4] text-white text-xs font-medium px-3 py-1 rounded-full">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Experienced With */}
+            <div>
+              <h3 className="text-lg font-semibold text-gray-700 mb-2">Experienced With:</h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "AWS (EC2, S3)",
+                  "Azure",
+                  "C#",
+                  "C++",
+                  "Linux",
+                  "MySQL",
+                  "Node.js",
+                  "PostgreSQL",
+                  "React",
+                  "REST APIs",
+                  "SPA Development"
+                ].map((skill, index) => (
+                  <span key={index} className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full border border-blue-300">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Coursework Integration */}
+            <div>
+              <h3 className="text-lg font-semibold text-gray-700 mb-2">Coursework Integration:</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Applied project management, full-stack web development, machine learning, and database systems in Junior Core course.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Portfolio Grid Section */}
         <section className="py-12 px-4 max-w-7xl mx-auto">
+        <h2 className="text-2xl font-bold text-blue-900 mb-6 text-center">Projects</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {projects.map((project, index) => (
               <div
@@ -48,9 +109,24 @@ const Portfolio: React.FC = () => {
                   className="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-center items-center text-white text-center px-4">
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                  <h3
+                    className="text-xl font-extrabold mb-2 text-white px-3 py-1 rounded"
+                    style={{ backgroundColor: "#4682B4" }}
+                  >
+                    {project.title}
+                  </h3>
+                  
                   <p className="text-sm mb-4">{project.description}</p>
-                  <span className="text-blue-400 underline">View Project</span>
+                  
+                  <span
+                    className="inline-flex items-center gap-2 text-white py-1 px-3 rounded-full text-sm font-medium shadow-lg transition duration-300 hover:brightness-110"
+                    style={{ backgroundColor: "#4682B4" }}
+                  >
+                    View Project
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </span>
                 </div>
               </div>
             ))}
