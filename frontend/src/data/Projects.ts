@@ -43,7 +43,7 @@ const projects = [
     {
       title: "Interactive Model",
       date: "07/26/2024",
-      description: "A volunteer and event management system with analytics for a nonprofit serving Utah's homeless.",
+      description: "Interactive model built with HTML, CSS, and JavaScript to visualize the Christlike Leader framework.",
       longDescription:
         "This project is an interactive visualization of the Christlike Leader Model, created in collaboration with the Sorensen Center. Using HTML, CSS, and JavaScript, I designed a responsive, user-friendly interface that allows visitors to explore core leadership principles in a dynamic and memorable way. Users can hover over each principle to reveal concise explanations, click through layered elements for deeper doctrinal context, and navigate seamlessly between visual components that reinforce key attributes of Christlike leadership. The interactivity transforms abstract ideas into an intuitive experience, helping users internalize the spiritual and practical qualities of becoming a Christ-centered leader. This project blends faith-based learning with modern web design, showcasing how technology can support reflective, meaningful engagement.",
       image: CCLMImage,
