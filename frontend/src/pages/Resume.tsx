@@ -74,7 +74,7 @@ const Resume: React.FC = () => {
             <div className="space-y-6">
               {/* Technical Skills */}
               <motion.section className="bg-white p-6 rounded shadow-md" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-                <h2 className="text-2xl font-semibold flex items-center gap-2 mb-6 text-blue-900">
+                <h2 className="text-2xl font-semibold flex items-center gap-2 mb-6 ">
                   <FaLaptopCode /> Technical Skills
                 </h2>
                 <div className="space-y-6">

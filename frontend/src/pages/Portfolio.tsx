@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Layout from "../components/Layout";
 import projects from "../data/Projects";
 import SectionHeader from '../components/SectionHeader';
+import { motion } from "framer-motion";
 
 interface Project {
   title: string;
@@ -23,69 +24,22 @@ const Portfolio: React.FC = () => {
         {/* Promo Section */}
         <SectionHeader text="Portfolio" />
 
-        {/* Technical Skills Section */}
-        <section className="py-12 px-4 max-w-5xl mx-auto">
-          <h2 className="text-2xl font-bold text-blue-900 mb-6 text-center">Technical Skills</h2>
-
-          <div className="space-y-6">
-            {/* Proficient In */}
-            <div>
-              <h3 className="text-lg font-semibold text-gray-700 mb-2">Proficient In:</h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  "Figma",
-                  "Git",
-                  "HTML/CSS",
-                  "JavaScript",
-                  "Microsoft Excel (VBA, PivotTables)",
-                  "Python",
-                  "SQL",
-                  "Tableau"
-                ].map((skill, index) => (
-                  <span key={index} className="inline-block bg-[#4682B4] text-white text-xs font-medium px-3 py-1 rounded-full">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Experienced With */}
-            <div>
-              <h3 className="text-lg font-semibold text-gray-700 mb-2">Experienced With:</h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  "AWS (EC2, S3)",
-                  "Azure",
-                  "C#",
-                  "C++",
-                  "Linux",
-                  "MySQL",
-                  "Node.js",
-                  "PostgreSQL",
-                  "React",
-                  "REST APIs",
-                  "SPA Development"
-                ].map((skill, index) => (
-                  <span key={index} className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full border border-blue-300">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Coursework Integration */}
-            <div>
-              <h3 className="text-lg font-semibold text-gray-700 mb-2">Coursework Integration:</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Applied project management, full-stack web development, machine learning, and database systems in Junior Core course.
+        {/* Welcome Text */}
+        <motion.div
+              className="text-box px-4 md:px-12 lg:px-20"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <br />
+              <p className="text-gray-700 text-sm md:text-base text-center leading-relaxed max-w-3xl mx-auto">
+                Here are a few of the projects I’ve built or contributed to recently. These reflect my passion for clean, user-focused design and practical problem-solving with modern technologies. From full-stack applications to interactive UI experiences, each project showcases a different part of my journey as a developer.
               </p>
-            </div>
-          </div>
-        </section>
+            </motion.div>
 
         {/* Portfolio Grid Section */}
-        <section className="py-12 px-4 max-w-7xl mx-auto">
-        <h2 className="text-2xl font-bold text-blue-900 mb-6 text-center">Projects</h2>
+        <section className="py-10 px-4 max-w-7xl mx-auto">
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {projects.map((project, index) => (
               <div
@@ -124,26 +78,27 @@ const Portfolio: React.FC = () => {
         </section>
 
         {/* Modal */}
+        {/* Modal */}
         {selectedProject && (
           <div
             className="fixed inset-0 bg-black bg-opacity-70 z-50 flex justify-center items-start px-4 pt-20 pb-6"
             onClick={() => setSelectedProject(null)}
           >
             <div
-              className="bg-white rounded-lg max-w-2xl w-full h-[85vh] overflow-y-auto relative"
+              className="bg-white rounded-lg max-w-2xl w-full h-[85vh] overflow-hidden relative"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Close Button */}
+              {/* Close Button (fixed position inside modal container) */}
               <button
-                className="absolute top-3 right-4 text-gray-500 hover:text-gray-700 bg-gray-200 hover:bg-gray-300 p-1 rounded-full transition"
+                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center transition z-10"
                 onClick={() => setSelectedProject(null)}
                 aria-label="Close Modal"
               >
                 <span className="text-xl font-bold">&times;</span>
               </button>
 
-              {/* Scrollable Modal Content */}
-              <div className="p-6 pt-14">
+              {/* Scrollable Content */}
+              <div className="p-6 pt-14 overflow-y-auto h-full">
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
@@ -166,31 +121,29 @@ const Portfolio: React.FC = () => {
                   ))}
                 </div>
 
-
                 <div className="flex gap-4 mt-4">
-                {/* Outlined Button - Repo */}
-                <a
-                  href={selectedProject.repoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 rounded border border-blue-600 text-blue-600 bg-white hover:bg-blue-600 hover:text-white transition duration-300"
-                >
-                  View Repo
-                </a>
-
-                {/* Filled Button - Live Site */}
-                {selectedProject.liveLink && (
+                  {/* Button - Repo */}
                   <a
-                  href={selectedProject.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 rounded border border-blue-600 text-blue-600 bg-white hover:bg-blue-600 hover:text-white transition duration-300"
-                >
-                    View Site
+                    href={selectedProject.repoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded border border-blue-600 text-blue-600 bg-white hover:bg-blue-600 hover:text-white transition duration-300"
+                  >
+                    View Repo
                   </a>
-                )}
-              </div>
 
+                  {/* Button - Live Site */}
+                  {selectedProject.liveLink && (
+                    <a
+                      href={selectedProject.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 rounded border border-blue-600 text-blue-600 bg-white hover:bg-blue-600 hover:text-white transition duration-300"
+                    >
+                      View Site
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           </div>

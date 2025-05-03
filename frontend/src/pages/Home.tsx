@@ -9,7 +9,7 @@ import AboutImage from '../assets/About.png';
 import ResumeImage from '/src/assets/Resume.png';
 import ContactImage from '../assets/Contact.png';
 import PortfolioImage from '/src/assets/Portfolio.png';
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 const imageMap: Record<string, string> = {
   "About Me": AboutImage,
@@ -26,13 +26,13 @@ const sections = [
 ];
 
 const Home: React.FC = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+  // const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
 
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 600);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  // useEffect(() => {
+  //   const handleResize = () => setIsMobile(window.innerWidth < 600);
+  //   window.addEventListener('resize', handleResize);
+  //   return () => window.removeEventListener('resize', handleResize);
+  // }, []);
 
   return (
     <Layout>
@@ -44,45 +44,51 @@ const Home: React.FC = () => {
           </div>
 
           {/* Overlay text */}
-          <div style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "95%",
-            height: "100%",
-            zIndex: 2,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            padding: "20px",
-            textAlign: "center",
-            margin: "0 auto"
-          }}>
-            <div className="sm:mt-4 md:mt-8 lg:mt-12"></div>
+          {/* Overlay text inside image container */}
+          <div
+  style={{
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    zIndex: 2,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "20px",
+    textAlign: "center",
+  }}
+>
+  <motion.div
+    className="flex flex-col items-center text-center gap-4"
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }}
+  >
+    {/* Welcome Title */}
+    <div className="relative inline-block mb-4">
+      <h1 className="text-5xl md:text-7xl lg:text-8xl filled-text">Welcome</h1>
+      <h1 className="text-5xl md:text-7xl lg:text-8xl outlined-text" aria-hidden="true">Welcome</h1>
+    </div>
 
-            <motion.div className="w-full max-w-[90vw] md:max-w-[700px] mx-auto fade-in-up" initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.3 }}>
-              <svg viewBox="0 -80 1100 300" preserveAspectRatio="xMidYMid meet" className="w-full h-auto svg-welcome-wrapper">
-                <text x={isMobile ? "51%" : "50%"} y={isMobile ? 180 : 200} fontSize={isMobile ? 250 : 200} fontWeight="bold" fill="white" stroke="#4682B4" strokeWidth="4" strokeLinejoin="round" fontFamily="inherit" textAnchor="middle" className="svg-welcome">Welcome</text>
-                <text x={isMobile ? "51%" : "50%"} y={isMobile ? 180 : 200} fontSize={isMobile ? 250 : 200} fontWeight="bold" fill="white" fontFamily="inherit" textAnchor="middle" className="svg-welcome">Welcome</text>
-              </svg>
-            </motion.div>
+    {/* Subtitles */}
+    {["Build with Purpose", "Design with Intention", "Create with Meaning"].map((line, index) => (
+      <motion.div
+        key={line}
+        className="relative inline-block"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 + index * 0.3, duration: 0.6 }}
+      >
+        <p className="text-xl md:text-2xl lg:text-3xl filled-text">{line}</p>
+        <p className="text-xl md:text-2xl lg:text-3xl outlined-text" aria-hidden="true">{line}</p>
+      </motion.div>
+    ))}
+  </motion.div>
+</div>
 
-            {["Build with Purpose", "Design with Intention", "Create with Meaning"].map((line, index) => (
-              <motion.div
-                key={line}
-                className="w-full max-w-[90vw] md:max-w-[700px] mx-auto fade-in-up"
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.5 + index * 0.3 }}
-              >
-                <svg viewBox="0 0 1000 100" preserveAspectRatio="xMidYMid meet" className="w-full h-auto">
-                  <text x={isMobile ? "53%" : "50%"} y={isMobile ? 70 : 45} fontSize={isMobile ? 65 : 45} fontWeight="bold" fill="white" stroke="#4682B4" strokeWidth="1.75" strokeLinejoin="round" fontFamily="inherit" textAnchor="middle" className="svg-subtitle">{line}</text>
-                  <text x={isMobile ? "53%" : "50%"} y={isMobile ? 70 : 45} fontSize={isMobile ? 65 : 45} fontWeight="bold" fill="white" fontFamily="inherit" textAnchor="middle" className="svg-subtitle">{line}</text>
-                </svg>
-              </motion.div>
-            ))}
-          </div>
+
         </div>
 
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.2 }}>

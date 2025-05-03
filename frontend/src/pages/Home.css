@@ -102,3 +102,21 @@
 .group:hover .group-hover-rotate-y-180 {
   transform: rotateY(180deg);
 }
+
+.filled-text {
+  color: white;
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.outlined-text {
+  color: transparent;
+  -webkit-text-stroke: 2px #4682B4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  white-space: nowrap;
+  pointer-events: none;
+}
