@@ -120,3 +120,35 @@
   white-space: nowrap;
   pointer-events: none;
 }
+
+.double-corner-box {
+  --b: 5px;       /* border thickness */
+  --c: white;     /* color */
+  --w: 60px;      /* width of outer corner */
+  --offset: 12px; /* distance between outer and inner corners */
+  --inner-size: 25px; /* inner corner size */
+
+  position: relative;
+  padding: 1.5rem;
+  box-sizing: border-box;
+
+  background:
+    /* Outer top-left corner */
+    conic-gradient(from 90deg at top var(--b) left var(--b), #0000 90deg, var(--c) 0) 0 0 / var(--w) var(--w) no-repeat,
+
+    /* Outer bottom-right corner */
+    conic-gradient(from -90deg at bottom var(--b) right var(--b), #0000 90deg, var(--c) 0) 100% 100% / var(--w) var(--w) no-repeat,
+
+    /* Inner top-left corner - horizontal line */
+    linear-gradient(to right, var(--c), var(--c)) top calc(var(--offset)) left calc(var(--offset)) / var(--inner-size) var(--b) no-repeat,
+
+    /* Inner top-left corner - vertical line */
+    linear-gradient(to bottom, var(--c), var(--c)) top calc(var(--offset)) left calc(var(--offset)) / var(--b) var(--inner-size) no-repeat,
+
+    /* Inner bottom-right corner - horizontal line */
+    linear-gradient(to left, var(--c), var(--c)) bottom calc(var(--offset)) right calc(var(--offset)) / var(--inner-size) var(--b) no-repeat,
+
+    /* Inner bottom-right corner - vertical line */
+    linear-gradient(to top, var(--c), var(--c)) bottom calc(var(--offset)) right calc(var(--offset)) / var(--b) var(--inner-size) no-repeat;
+}
+

@@ -46,48 +46,49 @@ const Home: React.FC = () => {
           {/* Overlay text */}
           {/* Overlay text inside image container */}
           <div
-  style={{
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
-    zIndex: 2,
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: "20px",
-    textAlign: "center",
-  }}
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              zIndex: 2,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "20px",
+              textAlign: "center",
+            }}
+          >
+            <motion.div
+  className="double-corner-box flex flex-col items-center text-center gap-4"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
 >
-  <motion.div
-    className="flex flex-col items-center text-center gap-4"
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1 }}
-  >
-    {/* Welcome Title */}
-    <div className="relative inline-block mb-4">
-      <h1 className="text-5xl md:text-7xl lg:text-8xl filled-text">Welcome</h1>
-      <h1 className="text-5xl md:text-7xl lg:text-8xl outlined-text" aria-hidden="true">Welcome</h1>
-    </div>
+  {/* Welcome Title */}
+  <div className="relative inline-block mb-4">
+    <h1 className="text-5xl md:text-7xl lg:text-8xl filled-text">Welcome</h1>
+    <h1 className="text-5xl md:text-7xl lg:text-8xl outlined-text" aria-hidden="true">Welcome</h1>
+  </div>
 
-    {/* Subtitles */}
-    {["Build with Purpose", "Design with Intention", "Create with Meaning"].map((line, index) => (
-      <motion.div
-        key={line}
-        className="relative inline-block"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5 + index * 0.3, duration: 0.6 }}
-      >
-        <p className="text-xl md:text-2xl lg:text-3xl filled-text">{line}</p>
-        <p className="text-xl md:text-2xl lg:text-3xl outlined-text" aria-hidden="true">{line}</p>
-      </motion.div>
-    ))}
-  </motion.div>
-</div>
+  {/* Subtitles */}
+  {["Build with Purpose", "Design with Intention", "Create with Meaning"].map((line, index) => (
+    <motion.div
+      key={line}
+      className="relative inline-block"
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.5 + index * 0.3, duration: 0.6 }}
+    >
+      <p className="text-xl md:text-2xl lg:text-3xl filled-text">{line}</p>
+      <p className="text-xl md:text-2xl lg:text-3xl outlined-text" aria-hidden="true">{line}</p>
+    </motion.div>
+  ))}
+</motion.div>
 
+
+          </div>
 
         </div>
 
