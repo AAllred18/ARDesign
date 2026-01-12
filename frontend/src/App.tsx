@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -13,6 +14,7 @@ import Contact from './pages/Contact';
 const App: React.FC = () => {
   return (
     <>
+      <Analytics />
       <ScrollToTop />
       <Navbar />
       <div style={{ padding: '20px' }}>
