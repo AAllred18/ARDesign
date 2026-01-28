@@ -24,8 +24,8 @@ const Resume: React.FC = () => {
                 <p className="font-bold">Bachelor of Science, Information Systems</p>
                 <p>Brigham Young University, Apr 2026</p>
                 <ul className="list-disc list-inside mt-2 text-gray-700">
-                  <li>GPA: 3.32 | 50% Tuition Scholarship</li>
-                  <li>Courses: Data Structures, Machine Learning, Enterprise Development</li>
+                  <li>GPA: 3.39 | 50% Tuition Scholarship</li>
+                  <li>Courses: User Experience Design, Machine Learning, Enterprise Development</li>
                   <li>Association for Information Systems Member</li>
                 </ul>
               </motion.div>
@@ -39,8 +39,8 @@ const Resume: React.FC = () => {
                   <div>
                     <p className="font-bold">Website Manager – BYU Sorensen Center (May 2024 – Present)</p>
                     <ul className="list-disc list-inside text-gray-700">
-                      <li>Boosted website search visibility by 20%</li>
-                      <li>Developed interactive model with HTML, CSS, JavaScript</li>
+                      <li>Increased website engagement by 20%</li>
+                      <li>Built interactive web model (HTML, CSS, JavaScript)</li>
                       <li>Improved newsletter open rate by 10%</li>
                     </ul>
                   </div>
