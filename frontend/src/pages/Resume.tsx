@@ -92,7 +92,7 @@ const Resume: React.FC = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-700 mb-2">Experienced With:</h3>
                     <div className="flex flex-wrap gap-2">
-                      {["AWS (EC2, S3)", "Azure", "C#", "C++", "Linux", "MySQL", "Node.js", "PostgreSQL", "React", "REST APIs", "SPA Development"].map((skill, index) => (
+                      {["AWS (EC2, S3)", "Azure", "C#", "C++", "Linux", "MongoDB", "MySQL", "Node.js", "PostgreSQL", "R", "React", "REST APIs", "SPA Development"].map((skill, index) => (
                         <span key={index} className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full border border-blue-300">
                           {skill}
                         </span>
@@ -103,7 +103,9 @@ const Resume: React.FC = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-700 mb-2">Coursework Integration:</h3>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Applied project management, full-stack web development, machine learning, and database systems in Junior Core course.
+                      INTEX II. Designed UI and integrated APIs for a React-based movie recommender app, enhancing usability and accuracy (2025)
+                      INTEX I. Deployed website and database on AWS (EC2, S3, RDS) for scalable, secure client analytics access (2024)
+                      Developed standalone interactive web model to improve event engagement and user understanding (2024)
                     </p>
                   </div>
                 </div>
